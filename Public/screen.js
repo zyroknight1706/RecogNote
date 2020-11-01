@@ -1,7 +1,7 @@
 const webshot = require("webshot");
 
 function takeshot() { 
-    
+    // const webshot = require("webshot");
     const optionselector = {
         captureSelector: '#drawing-board'
     };
