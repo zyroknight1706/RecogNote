@@ -60,10 +60,22 @@
            canvas.addEventListener("mousemove", draw);
        });
    </script>
-   <button onclick = "takeshot()">take photo</button>
-   <script src="Public/screen.js">
-        
+   <script src="App.js">
+    function takeshot() { 
+    
+    const optionselector = {
+        captureSelector: '#drawing-board'
+    };
+    webshot("#", "scr.png", optionselector, function(err){
+        if(!err){
+            console.log("it works");
+        } else { console.log(err) }
+    });
+}
     </script>
+
+   <button onclick = "takeshot()">take photo</button>
+   
     <h1>Screenshot:</h1> 
     <div id="output"></div> 
 </body> 
