@@ -3,6 +3,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+var PdfPrinter = require('pdfmake');
+var printer = new PdfPrinter(fonts);
+var fs = require('fs');
 app.use("/Public", express.static(__dirname+"/Public/"));
 // app.use(express.urlencoded({extended:true}));
 // app.use(express.json);
