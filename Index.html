@@ -8,8 +8,8 @@
     </title> 
   
     <!-- Include from the CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"> 
-    </script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"> 
+    </script>  -->
   
     <!-- Include locally otherwise -->
     <!-- <script src='html2canvas.js'></script> -->
@@ -27,6 +27,7 @@
   
 <body> 
    <canvas id = "drawing-board"></canvas>
+   
    <script>
        window.addEventListener("load", function(){
            const canvas = document.querySelector("#drawing-board");
@@ -60,30 +61,9 @@
        });
    </script>
    <button onclick = "takeshot()">take photo</button>
+   <script type="text/javascript" src = "scr.js"></script>
     <h1>Screenshot:</h1> 
     <div id="output"></div> 
-  
-    <script type="text/javascript"> 
-  
-        // Define the function  
-        // to screenshot the div 
-        function takeshot() { 
-            let div = 
-                document.getElementById('drawing-board');
-            var fs = require('fs');
-            // Use the html2canvas 
-            // function to take a screenshot 
-            // and append it 
-            // to the output div 
-            html2canvas(div).then( 
-                function (canvas) { 
-                    // document 
-                    // .getElementById('output') 
-                    // .appendChild(canvas);
-                    const dataURL = canvas.toDataURL("img/png");
-                });
-        } 
-    </script> 
 </body> 
   
 </html> 
