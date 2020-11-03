@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgba(204, 72, 204, 0.822);
     background-attachment: fixed;
 }
 .navbar {
